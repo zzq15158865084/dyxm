@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+	body{
+	height:100%;
+	}
+    *{margin:0;padding:0;}
+	.bgcolor{
+		width:1440px;height:80px;
+		}
+	.dos{
+		width:1200px;height:64px;
+    margin:0 auto;
+		padding:8px 0px 8px;
+		}
+	.c1{
+		width:300px;height:64px;
+		line-height:64px;
+		float:left;
+		}
+	.c1 img{
+		width:267px;height:48px;
+		margin:0px 0px 0xp 10px;
+    padding:8px;
+		}
+	.doa{
+		width: 900px;height:64px;
+		line-height:64px;
+	  margin-left:300px;	
+	}
+	.dropdown{
+		display:inline-block;
+		font-size:14px;
+		padding:0px 36px;	
+	}
+	ul{
+    list-style: none;
+    }
+	.dropdown ul a{
+    display: block;
+    text-decoration: none;
+    width: 100px;
+    height:35px;
+    text-align: center;
+    line-height: 20px;
+    background-color:#fff;
+		padding:0px;
+    }
+	.dropdown a{
+	padding:8px 0px; 
+	color:rgba(31,37,38,.75);
+	}
+	.dropdown{
+    position: relative;
+    }
+  .drop-down-content{
+    padding: 8px 0px;
+    display: none;
+	  text-align: center;
+	  line-height: 32px;
+		position: absolute;
+    }
+  .dropdown a:hover a{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(186, 29, 29);
+    }
+  .doa .dropdown:hover .drop-down-content{
+    display: block;
+    }
+	.bgcolor1{
+		width:1440px;height:298px;
+		background:#393939;
+		text-align:center;
+		}
+	.dos1{
+    width:1200px;height:298px;
+		margin:0 auto;
+	  }
+	.dos1 p{
+		font-family:微软雅黑, MicrosoftJhengHei, 华文细黑, STHeiti, MingLiu;
+    color: rgb(157, 157, 157);
+    font-size: 12px;
+    padding:30px 0px 10px;
+		text-align:left;
+	  }
+	.hr{
+		width:1200px;height:9px;
+		line-height: 9px;
+		}
+	.hr hr{
+    background-color:#f9f9f9;
+    }
+	.dos2{
+		width:1200px;height:135px;
+		padding-top:15px;
+		bottom:241px;
+		left:120px;
+		position:relative;
+	}
+	.fos{
+		width:400px;height:108px;
+		position:absolute;
+		bottom:25px;
+		text-align:left;
+	}
+	.fos p{
+		margin:8px 0px;
+		color:#9d9d9d;
+		font-size:11px;
+		font: 12px/1.5 'Helvetica Neue', 'Helvetica', "Hiragino Sans GB",Arial,"Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei",'PingFang SC', SimSun, sans-serif;
+	}
+	.fos .f1{
+		margin-top:0px;
+	}
+	.fos1{
+		width:600px;height:116px;
+	  bottom:17px;
+		left:398px;
+		position:absolute;
+	}
+	.fos12{
+		width:134px;height:112px;
+		padding:8px;
+		float:left;
+		text-align:left;
+	}
+	.fos12 ul li a{
+		color:#9d9d9d;
+		font-size:12px;
+		text-decoration:none;
+	}
+	.fos2{
+		width:200px;height:135px;
+	  bottom:-2px;
+		right:0px;
+		position:absolute;
+	}
+	.fos2 div{
+		width:100px;height:135px;
+		float:left;
+		text-align:center;
+	}
+	.fos2 div img{
+    width:83px; height:83px;
+	}
+	.fos2 div p{
+		color:#9d9d9d;
+	}
+	.bgcolor2{
+	width:1440px;height:300px;
+	}
+	.dos3 img{
+  width:1400px;height:300px;
+	}
+	.bgcolor3{
+	width:1440px;height:526px;
+	}
+	.cos{
+	width:1200px;height:466px;
+  padding:30px 0px;
+	margin:0 auto;
+	}
+	.cos1{
+	width:1200px;height:36px;
+	}
+	.cos1 a{
+  width:126px;height:36px;
+	padding:0px 15px;
+	font-size: 14px;
+	text-align:center;
+	line-height: 36px;
+	text-decoration:none;
+	border-left:1px solid #888888;
+	color: #9d9d9d;
+	}
+	.cos1 a span{
+	padding:10px 20px;	
+	}
+	.cos1 a:first-child span{
+	background:red;
+	color:#fff;
+	}
+	.cos2{
+	padding-top:20px;
+	padding-bottom:50px;
+	color: #9d9d9d;
+	}
+	.cos h1{
+	color:black;
+	}
+	.cos21{
+	height:25px;
+	}
+	.cos2 p{
+	padding:8px 0px;
+	}
+	.cos22{
+	height:182px;
+	}
+  </style>
+</head>
+<body>
+	<!--头部标题菜单-->
+  <div class="bgcolor">
+	<div class="dos">
+	<div class="c1">
+	  <img src="img/13039_jo53z6bk (1).png" alt="" />
+		</div>
+		<div class="doa">
+	    <div class="dropdown">
+			<a href="shouye.html"><span>首页</span></a>
+	    </div>
+	  	<div class="dropdown">
+			<a href="dywm.html"><span>关于我们</span></a>
+			<ul class="drop-down-content">
+			   <li><a href="#">关于我们</a></li>
+			   <li><a href="#">企业文化</a></li>
+			   <li><a href="#">合作伙伴</a></li>
+			   <li><a href="#">荣誉证书</a></li>
+			</ul>
+		  </div>
+	  	<div class="dropdown">
+			<a href="jtjg.html"><span>集团架构</span></a>
+		  </div>
+	  	<div class="dropdown">
+			<a href="xmal.html"><span>项目案例</span></a>
+			<ul class="drop-down-content">
+			   <li><a href="#">全部</a></li>
+			   <li><a href="#">建筑设计</a></li>
+			   <li><a href="#">室内设计</a></li>
+			   <li><a href="#">景观设计</a></li>
+			   <li><a href="#">结构设计</a></li>
+			</ul>
+		</div>
+	  	<div class="dropdown">
+			<a href="#"><span>团队精英</span></a>
+		</div>
+	  	<div class="dropdown">
+			<a href="#"><span>新闻中心</span></a>
+	  	</div>
+		<div class="dropdown">
+			<a href="#"><span>加入我们</span></a>
+			<ul class="drop-down-content">
+				<li><a href="dl.html">登录</a></li>
+				<li><a href="zc.html">注册</a></li>
+			</ul>
+		</div>
+		</div>
+		</div>
+	</div>
+	<!--关于自己的公司的介绍-->
+<div class="bgcolor2">
+	<div class="dos3">
+		<img src="img/13039_jo3wkir6.jpg" alt="">
+	</div>
+</div>
+<div class="bgcolor3">
+<div class="cos">
+<div class="cos1">
+	<a href="#"><span>关于我们</span></a>
+	<a href="#"><span>企业文化</span></a>
+	<a href="#"><span>合作伙伴</span></a>
+	<a href="#"><span>荣誉证书</span></a>
+</div>
+<div class="hr">
+	<hr>
+</div>
+<div class="cos2">
+<h1>汉匠（巴黎）国际设计集团</h1>
+<br>
+<span>我们以客户需求和前沿发展理念为驱动力，使公司始终处于行业领先地位，将富有特色的方案与强大的技术相结合，不断增强综合解决能力。科学地统筹“咨询、设计、技术、管理”互联的高效服务模式，因地制宜地为不同城市建设项目提供具有创新性和经济性的解决方案。</span>
+<div class="cos21"></div>
+<div class="cos22">
+<p><span>汉沙杨景观公司具有中国建设部颁发的风景园林工程设计专项甲级资质。</span></p>
+<p><span>公司核心成员均为具有多年专业经验的中国及海外知名城市规划师、建筑师、景观设计师、室内设计师及其他专业人才，</span></p>
+<p><span>多年来主持参与了中国及海外多个城市规划及建筑、风景园林规划和设计、室内设计项目，许多项目在业内具有一定影响力。</span></p>
+<p><span>凭借强有力的学术与技术背景，带来创新思维和国际视野，与国际潮流同步并基于对中国国情的了解，</span></p>
+<p><span>致力将最高水准的专业知识和工作经验凝聚成符合中国市场需要的一个个设计精品，为海内外市场提供高品质的服务，给世界带来惊叹和喜悦。</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+	<!--底部标签-->
+<div class="bgcolor1">
+	<div class="dos1">
+		<p><span>COPYRIGHT (©) 2018汉匠（巴黎）国际设计集团公司模板</span></p>
+		<div class="hr">
+				<hr>
+		</div>
+	</div>
+	<div class="dos2">
+		<div class="fos">
+			<p class="f1">
+				<span>中国互联网省域名市网站区666号</span>
+			</p>
+			<p>
+				<span>China Internet provincial domain name municipal net station area 666</span>
+			</p>
+			<p>
+				<span>T. </span>
+				<span>100-0000-0000</span>
+			</p>
+			<p>
+				<span>F. </span>
+				<span>100-0000-0000</span>
+			</p>
+		</div>
+		<div class="fos1">
+			<div class="fos12">
+                <ul>
+                    <li><a href="#"><span>关于我们</span></a></li>
+                    <li><a href="#"><span>企业文化</span></a></li>
+                    <li><a href="#"><span>合作伙伴</span></a></li>
+                    <li><a href="#"><span>荣誉证书</span></a></li>
+                </ul>
+            </div>
+            <div class="fos12">
+                <ul>
+                    <li><a href="#"><span>项目案例</span></a></li>
+                    <li><a href="#"><span>建筑设计</span></a></li>
+                    <li><a href="#"><span>室内设计</span></a></li>
+                    <li><a href="#"><span>景观设计</span></a></li>
+                </ul>
+            </div>
+            <div class="fos12">
+                <ul>
+                    <li><a href="#"><span>团队精英</span></a></li>
+                    <li><a href="#"><span>新闻中心</span></a></li>
+                    <li><a href="#"><span>联系我们</span></a></li>
+                    <li><a href="#"><span>加入我们</span></a></li>
+                </ul>
+            </div>
+            <div class="fos12">
+                <ul>
+                    <li><a href="#"><span>建筑百科</span></a></li>
+                    <li><a href="#"><span>如何设计</span></a></li>
+                    <li><a href="#"><span>选材知识</span></a></li>
+                    <li><a href="#"><span>构造框架</span></a></li>
+                </ul>
+			</div>
+		</div>
+		<div class="fos2">
+				<div>
+					<img src="img/13039_joatsce1.png" alt=""/>
+					<p>关注我们</p>
+				</div>
+				<div>
+					<img src="img/13039_joatsce1.png" alt=""/>
+					<p>加入我们</p>
+				</div>
+		</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{margin:0;padding:0;}
+	.bgcolor{
+		width:1440px;height:80px;
+		}
+	.dos{
+		width:1200px;height:64px;
+    margin:0 auto;
+		padding:8px 0px 8px;
+		}
+	.c1{
+		width:300px;height:64px;
+		line-height:64px;
+		float:left;
+		}
+	.c1 img{
+		width:267px;height:48px;
+		margin:0px 0px 0xp 10px;
+    padding:8px;
+		}
+	.doa{
+		width: 900px;height:64px;
+		line-height:64px;
+	  margin-left:300px;	
+	}
+	.dropdown{
+		display:inline-block;
+		font-size:14px;
+		padding:0px 36px;
+		position: relative;
+		z-index: 1000;
+	}
+	ul{
+    list-style: none;
+    }
+	.dropdown ul a{
+    display: block;
+    text-decoration: none;
+    width: 100px;
+    height:35px;
+    text-align: center;
+    line-height: 20px;
+    background-color:#fff;
+		padding:0px;
+    }
+	.dropdown a{
+		padding:8px 0px;
+		color:rgba(31,37,38,.75);
+	}
+  .drop-down-content{
+    padding: 8px 0px;
+    display: none;
+		text-align: center;
+		line-height: 32px;
+		position: absolute;
+    }
+  .dropdown a:hover a{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(186, 29, 29);
+    }
+  .doa .dropdown:hover .drop-down-content{
+    display: block;
+    }
+	.bgcolor1{
+		width:1440px;height:298px;
+		background:#393939;
+		text-align:center;
+		}
+	.dos1{
+    width:1200px;height:298px;
+		margin:0 auto;
+	}
+	.dos1 p{
+		font-family:微软雅黑, MicrosoftJhengHei, 华文细黑, STHeiti, MingLiu;
+    color: rgb(157, 157, 157);
+    font-size: 12px;
+    padding:30px 0px 10px;
+		text-align:left;
+	}
+	.dos1 .hr{
+		width:1200px;height:9px;
+		line-height: 9px;
+		}
+	.dos1 .hr hr{
+    background-color:#f9f9f9;
+    }
+	.dos2{
+		width:1200px;height:135px;
+		padding-top:15px;
+		bottom:241px;
+		left:120px;
+		position:relative;
+	}
+	.fos{
+		width:400px;height:108px;
+		position:absolute;
+		bottom:25px;
+		text-align:left;
+	}
+	.fos p{
+		margin:8px 0px;
+		color:#9d9d9d;
+		font-size:11px;
+		font: 12px/1.5 'Helvetica Neue', 'Helvetica', "Hiragino Sans GB",Arial,"Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei",'PingFang SC', SimSun, sans-serif;
+	}
+	.fos .f1{
+		margin-top:0px;
+	}
+	.fos1{
+		width:600px;height:116px;
+	  bottom:17px;
+		left:398px;
+		position:absolute;
+	}
+	.fos12{
+		width:134px;height:112px;
+		padding:8px;
+		float:left;
+		text-align:left;
+	}
+	.fos12 ul li a{
+		color:#9d9d9d;
+		font-size:12px;
+		text-decoration:none;
+	}
+	.fos2{
+		width:200px;height:135px;
+	  bottom:-2px;
+		right:0px;
+		position:absolute;
+	}
+	.fos2 div{
+		width:100px;height:135px;
+		float:left;
+		text-align:center;
+	}
+	.fos2 div img{
+    width:83px; height:83px;
+	}
+	.fos2 div p{
+		color:#9d9d9d;
+	}
+	.wrap{
+		width:1440px;
+		height:500px;
+	}
+	.list{
+		width:1440px;
+		height:500px;
+		list-style:none;
+		padding:0px;
+	}
+	.item{
+		width:1440px;
+		height:500px;
+		color:#fff;
+		font-size: 50px;
+		position:absolute;
+	}
+	.item>img{
+	width:1440px;
+	height:500px;
+	position:relative;
+	}
+	.btn{
+		width:27px;
+		height:48px;
+		position:absolute;
+		top:250px;
+		z-index: 100;
+		padding:0px;
+		background-color: rgba(0,0,0,.5);
+	}
+	#gonext{
+	right:0px;
+	}
+	#gopre{
+	left:8px;
+	}
+	.item.active{  /*同时拥有这两个类优先显示*/
+		z-index: 10;
+	}
+	.pointlist{
+		padding-left:8px;
+		list-style: none;
+		position:absolute;
+		top:560px;
+		left:50%;
+		z-index: 1000;
+	}
+	.point{
+		width:12px;
+		height: 12px;
+		background:#fff;
+		border-radius:50%;
+		float:left;
+		margin-right:14px;
+		cursor: pointer;
+	}
+	.point.active{
+	background-color:yellow;
+	}
+  .warp .cos1{
+	width:900px;
+	font-size:14px;
+	color:#fff;
+  position:absolute;
+	top:120px;
+	right:110px;
+	padding-left:300px;
+	}
+	.warp .cos2{
+	width:923px;
+	font-size:14px;
+	color:#fff;
+  position:absolute;
+	top:120px;
+	left:110px;
+	padding-right:300px;
+	}
+	.warp .cos1 p{
+	text-align:right;
+	margin:6px 0px;
+	}
+	.warp .cos21{
+	font-size:26px;
+	}
+	.warp .cos22{
+	font-size:36px;
+	}
+	.cos23{
+	height:15px;
+	}
+	.warp .cos2 p{
+	text-align:left;
+	margin:6px 0px;
+	}
+	.bgcolor2{
+	width: 1440px;height:442px;
+	}
+	.nos{
+	width:1200px;height:362px;
+	padding:40px 0px;
+	margin:0 auto;
+	position:relative;
+	}
+	.nos1{
+	width:583px;
+	text-align:left;
+	padding-right:17px;	
+	}
+	.nos .hr{
+		width:583px;
+		padding:5px 0px 30px;
+		}
+	.nos .hr hr{
+    background-color:#f9f9f9;
+    }
+	.nos1 ul{
+		width:583px;height:119px;
+		margin:0 auto;
+		background:#f9f9f9;
+		padding-top:25px;
+		}
+	.nos1 li{
+		width:120px;height:69px;
+		float:left;
+		padding:12px;
+		text-align:center;
+		}
+	.nos1 li p{
+		margin:0;padding:0;
+	    color:#666;
+		font-size:12px;
+		}
+    .nos1 div p:first-child{
+		margin-bottom:8px;
+		font-size:18px;
+	}
+	.nos1 div p:last-child{
+		margin-top:8px;
+		color:#9d9d9d;
+		font-size:14px;
+	}
+	.nos1>p{
+    font-size:12px;
+	color:#888888;
+	padding:5px 0px;
+	}
+	.nos2{
+	width:583px;
+	text-align:left;
+	padding-left:17px;
+	position:absolute;
+	right:0px;
+	top:40px;
+	}
+	.nos21 p:first-child{
+		margin-bottom:8px;
+		font-size:18px;
+	}
+	.nos21 p:last-child{
+		margin-top:8px;
+		color:#9d9d9d;
+		font-size:14px;
+	}
+	.nos2 div>p{
+    font-size:12px;
+	color:#888888;
+	padding:5px 0px;
+	}
+	.nos2 div+div{
+    padding:12px;
+	}
+	.bgcolor3{
+	width: 1440px;height: 311px;
+	padding:20px 0px 40px;
+	}
+	.mos{
+	width:1200px;height:271px;
+	padding:40px 0px;
+	margin:0 auto;
+	}
+	.mos ul{
+		width:1200px;height:311px;
+		margin:0 auto;
+		background:#f9f9f9;
+		}
+	.mos li{
+		width:276px;height:256px;
+		float:left;
+		padding:12px;
+		text-align:center;
+		}
+	.mos li>p{
+		text-align:left;
+		margin:0;padding:0;
+	    color:#666;
+		font-size:14px;
+		}
+	.mos ul li>img{
+	width: 252px;height:199px;
+	padding:20px;
+	}
+  </style>
+</head>
+<body>
+<!--头部标题菜单-->
+    <div class="bgcolor">
+	<div class="dos">
+	<div class="c1">
+	  <img src="img/13039_jo53z6bk (1).png" alt="" />
+		</div>
+		<div class="doa">
+	    <div class="dropdown">
+			<a href="shouye.html"><span>首页</span></a>
+	    </div>
+	  	<div class="dropdown">
+			<a href="dywm.html"><span>关于我们</span></a>
+			<ul class="drop-down-content">
+			   <li><a href="#">关于我们</a></li>
+			   <li><a href="#">企业文化</a></li>
+			   <li><a href="#">合作伙伴</a></li>
+			   <li><a href="#">荣誉证书</a></li>
+			</ul>
+		  </div>
+	  	<div class="dropdown">
+			<a href="jtjg.html"><span>集团架构</span></a>
+		  </div>
+	  	<div class="dropdown">
+			<a href="xmal.html"><span>项目案例</span></a>
+			<ul class="drop-down-content">
+			   <li><a href="#">全部</a></li>
+			   <li><a href="#">建筑设计</a></li>
+			   <li><a href="#">室内设计</a></li>
+			   <li><a href="#">景观设计</a></li>
+			   <li><a href="#">结构设计</a></li>
+			</ul>
+		</div>
+	  	<div class="dropdown">
+			<a href="#"><span>团队精英</span></a>
+		</div>
+	  	<div class="dropdown">
+			<a href="#"><span>新闻中心</span></a>
+	  	</div>
+		<div class="dropdown">
+			<a href="#"><span>加入我们</span></a>
+			<ul class="drop-down-content">
+				<li><a href="dl.html">登录</a></li>
+				<li><a href="zc.html">注册</a></li>
+			</ul>
+		</div>
+		</div>
+		</div>
+	</div>
+	<!--轮播页面-->
+  <div class="warp">
+		<ul class="list">
+			<li class="item"><img src="img/1194_w2000.jpg" alt="" />
+			<div class="cos1">
+			  <p class="cos21"><span>建筑行业网站</span></p>
+				<p class="cos23"></p>
+			  <p class="cos22"><span>THICK FOUNDATION</span></p>
+				<p class="cos23"></p>
+			  <p><span>是世界上最大、最具影响力的建筑、室内设计、工程和城市规划事务所之一。自1936年创立以</span></p>
+			  <p><span>来，本事务所已在逾50个国家完成了10,000多个项目 . . .</span></p>
+		  </div>
+			</li>
+			<li class="item"><img src="img/3257_w2000.jpg" alt="" />
+			<div class="cos2">
+			  <p class="cos21"><span>建筑行业网站</span></p>
+				<p class="cos23"></p>
+			  <p class="cos22"><span>THICK FOUNDATION</span></p>
+				<p class="cos23"></p>
+			  <p><span>是世界上最大、最具影响力的建筑、室内设计、工程和城市规划事务所之一。自1936年创立以</span></p>
+			  <p><span>来，本事务所已在逾50个国家完成了10,000多个项目 . . .</span></p>
+		  </div>
+			</li>
+			<li class="item"><img src="img/3187_w2000.jpg" alt="" />
+			<div class="cos1">
+			  <p class="cos21"><span>建筑行业网站</span></p>
+				<p class="cos23"></p>
+			  <p class="cos22"><span>THICK FOUNDATION</span></p>
+				<p class="cos23"></p>
+			  <p><span>是世界上最大、最具影响力的建筑、室内设计、工程和城市规划事务所之一。自1936年创立以</span></p>
+			  <p><span>来，本事务所已在逾50个国家完成了10,000多个项目 . . .</span></p>
+		  </div>
+			</li>
+		</ul>
+		<ul class="pointlist">
+			<li class="point active" data-index="0"></li>  <!-- html自定义属性，在标签里存数据 -->
+			<li class="point" data-index="1"></li>
+			<li class="point" data-index="2"></li>
+		</ul>
+		<button type="button"  class="btn" id="gopre"><img src="img/arrow-left.png" alt="" /></button>
+		<button type="button"  class="btn" id="gonext"><img src="img/arrow-right.png" alt="" /></button>
+	</div>
+	<script>
+	// 通过classname选择器获取item
+	var items=document.getElementsByClassName("item");
+	// 通过ID选择器获取左右按钮
+	var gopre=document.getElementById("gopre");
+	var  gonext=document.getElementById("gonext");
+	var points=document.getElementsByClassName("point");
+	// 索引值 显示值为index的图片
+	var index=0;
+	// 清除所有的active
+	var clearactive=function(){
+		for(var i=0;i<items.length;i++){
+			items[i].className="item";
+		}
+		for(var i=0;i<points.length;i++){
+			points[i].className="point";
+		}
+	}
+	// 每次执行函数之前先调用clearactive()函数，然后再添加active这个类
+	var goindex=function(){
+		clearactive();
+		items[index].className="item active";
+		points[index].className="point active";
+	}
+	// 点击下一张函数
+	var goNext=function(){
+		if(index<4){
+			index++;
+		}else{
+			index=0;
+		}
+		goindex();
+	}
+	// 通过监听点击事件调用匿名函数进行下一张的切换
+	gonext.addEventListener("click", function(){
+		goNext();
+	})
+	// 上一张
+	var goPre=function(){
+		if(index==0){
+			index=4
+		}else{
+			index--;
+		}
+		goindex();
+	}
+	gopre.addEventListener("click", function(){
+		goPre();
+	})
+	for(var i=0;i<points.length;i++){
+		points[i].addEventListener("click",function(){
+			var pointindex=this.getAttribute("data-index");
+			index=pointindex;
+			goindex();
+		})
+	}
+	setInterval(function(){
+		goNext()
+	},2000)
+	</script>
+	<!--中部内容介绍-->
+	<div class="bgcolor2">
+   <div class="nos">
+	  <div class="nos1">
+	   <div>
+	     <p><span>集团简介</span></p>
+	     <p><span>Group Introduction</span></p>
+	   </div>
+	   <div class="hr">
+			<hr>
+		</div>
+	   <p><span>汉匠国际设计集团是极富创新性的国际化设计集团，成立于2018年。旗下包括深圳市汉沙杨景观规划设计有限公司、深圳市盛朗（室内）艺术设计有限公司、汉匠建筑设计咨询（深圳）有限公司和椭圆方程（深圳）信息技术有限公司。 汉沙杨景观公司具有中国建设部颁发的风景园..</span></p>
+	   <p><span>详情查看 》</span></p>
+	  <div>
+		  <ul>
+			  <li>
+				  <img src="img/13039_jo3vktee.png" alt="">
+				  <p>关于我们</p>
+			  </li>
+			  <li>
+				  <img src="img/13039_jo3vkzaa.png" alt="">
+				  <p>资质荣誉</p>
+			  </li>
+			  <li>
+				  <img src="img/13039_jo3vl6c7.png" alt="">
+				  <p>合作伙伴</p>
+			  </li>
+			  <li>
+				  <img src="img/13039_jo3vlcmo.png" alt="">
+				  <p>加入我们</p>
+			  </li>
+		  </ul>
+	  </div>
+	  </div>
+	  <div class="nos2">
+		<div class="nos21">
+		 <p><span>新闻资讯</span></p>
+		 <p><span>News information</span></p>
+	    </div>
+		<div class="hr">
+			<hr>
+		</div>
+		<div>
+	      <p><span>上市公司炒房记 高溢价“卖楼”频现</span></p>
+		  <p><span>以长城电脑为例，其出售房产为深圳市南山区沙河世纪村15栋7D号，面积155.87平方米。截至2015年9月30日，该房产账面价值为380万元，而其评估价值则高达947.7万元。</span></p>
+		  <p><span> 2018-11-09 10:29</span></p>
+		</div>
+		<div>
+		  <p><span>6平方米“蚁房”都要抢 楼市疯狂到不管硬伤</span></p>
+		  <p><span>其实，小于22平方米的住宅在深圳还有很多。记者调查发现，例如深圳的旭飞系列，梅林片区的凯伦花园等，都有十几平方米的户型，此类产品并非不能办房产证。</span></p>
+		  <p><span> 2018-11-09 10:28</span></p>
+	    </div>
+	  </div>
+	 </div>
+	</div>
+	<div class=bgcolor3>
+	 <div class="mos">
+     <ul>
+		 <li>
+			<p>建筑设计</p>
+			<img src="img/_jkuuv3f1.jpg" alt="">	
+		</li>
+		<li>
+			<p>景观设计</p>
+			<img src="img/13039_jo9f71ms.jpg" alt="">
+		</li>
+		<li>
+			<p>室内设计</p>
+			<img src="img/13039_jo9dr4ze.png" alt="">
+		</li>
+		<li>
+		    <p>结构设计</p>
+			<img src="img/13039_jo9e0kfw.png" alt="">
+		</li>
+	 </ul>
+	</div>
+    </div>
+		<!--底部标签-->
+<div class="bgcolor1">
+	<div class="dos1">
+		<p><span>COPYRIGHT (©) 2018汉匠（巴黎）国际设计集团公司模板</span></p>
+		<div class="hr">
+				<hr>
+		</div>
+	</div>
+	<div class="dos2">
+		<div class="fos">
+			<p class="f1">
+				<span>中国互联网省域名市网站区666号</span>
+			</p>
+			<p>
+				<span>China Internet provincial domain name municipal net station area 666</span>
+			</p>
+			<p>
+				<span>T. </span>
+				<span>100-0000-0000</span>
+			</p>
+			<p>
+				<span>F. </span>
+				<span>100-0000-0000</span>
+			</p>
+		</div>
+		<div class="fos1">
+			<div class="fos12">
+                <ul>
+                    <li><a href="#"><span>关于我们</span></a></li>
+                    <li><a href="#"><span>企业文化</span></a></li>
+                    <li><a href="#"><span>合作伙伴</span></a></li>
+                    <li><a href="#"><span>荣誉证书</span></a></li>
+                </ul>
+            </div>
+            <div class="fos12">
+                <ul>
+                    <li><a href="#"><span>项目案例</span></a></li>
+                    <li><a href="#"><span>建筑设计</span></a></li>
+                    <li><a href="#"><span>室内设计</span></a></li>
+                    <li><a href="#"><span>景观设计</span></a></li>
+                </ul>
+            </div>
+            <div class="fos12">
+                <ul>
+                    <li><a href="#"><span>团队精英</span></a></li>
+                    <li><a href="#"><span>新闻中心</span></a></li>
+                    <li><a href="#"><span>联系我们</span></a></li>
+                    <li><a href="#"><span>加入我们</span></a></li>
+                </ul>
+            </div>
+            <div class="fos12">
+                <ul>
+                    <li><a href="#"><span>建筑百科</span></a></li>
+                    <li><a href="#"><span>如何设计</span></a></li>
+                    <li><a href="#"><span>选材知识</span></a></li>
+                    <li><a href="#"><span>构造框架</span></a></li>
+                </ul>
+			</div>
+		</div>
+		<div class="fos2">
+				<div>
+					<img src="img/13039_joatsce1.png" alt=""/>
+					<p>关注我们</p>
+				</div>
+				<div>
+					<img src="img/13039_joatsce1.png" alt=""/>
+					<p>加入我们</p>
+				</div>
+		</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>
